@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace PathOfLowestCost
 {
-    class Program
+    public class SumTooBigException :Exception
     {
-        static void Main(string[] args)
+        public GraphPath GraphPath;
+
+        public SumTooBigException(GraphPath graphPath)
         {
+            GraphPath = graphPath;
         }
     }
 }
